@@ -13,7 +13,7 @@ const authorizationAccessTokenSchema = new Schema({
 });
 
 
-const AuthorizationAccessToken = mongoose.model('AuthorizationAccessToken', authorizatonAccessTokenSchema);
+const AuthorizationAccessToken = mongoose.model('AuthorizationAccessToken', authorizationAccessTokenSchema);
 
 const saveAccessToken = (token) => {
   let tokenModel = new AuthorizationAccessToken(token);
