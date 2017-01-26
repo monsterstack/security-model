@@ -1,0 +1,21 @@
+{
+  "name": "security-model",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./tests/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.24.0",
+    "debug": "^2.6.0",
+    "mongoose": "^4.7.6",
+    "promise": "^7.1.1",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
