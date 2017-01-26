@@ -8,7 +8,7 @@ const Schema = mongoose.Schema;
 const URL = 'mongodb://localhost/cdspSecurity';
 mongoose.connect(URL);
 
-const authorizationAccessToken = new Schema({
+const authorizationAccessTokenSchema = new Schema({
   access_token: String
 });
 
