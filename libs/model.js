@@ -1,11 +1,12 @@
 'use strict';
 const debug = require('debug')('tenant-model');
+const config = require('config');
 const mongoose = require('mongoose');
 const uuid = require ('uuid');
 const Schema = mongoose.Schema;
 
 // Need to get this from configuration
-const URL = 'mongodb://localhost/cdspSecurity';
+const URL = `mongodb://${config.db.host}:${config.db.port}/cdspSecurity`;
 mongoose.connect(URL);
 
 const authorizationAccessTokenSchema = new Schema({
