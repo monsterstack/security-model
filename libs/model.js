@@ -10,7 +10,8 @@ const URL = `mongodb://${config.db.host}:${config.db.port}/cdspSecurity`;
 mongoose.connect(URL);
 
 const authorizationAccessTokenSchema = new Schema({
-  access_token: String
+  access_token: String,
+  hash: String
 });
 
 
@@ -34,6 +35,18 @@ const saveAccessToken = (token) => {
 const findAccessToken = (tokenString) => {
   let p = new Promise((resolve, reject) => {
     AuthorizationAccessToken.findOne({access_token: tokenString}, (err, doc) => {
+      if(err) reject(err);
+      else {
+        resolve(doc);
+      }
+    });
+  });
+  return p;
+}
+
+const findAccessTokenByHash = (hash) => {
+  let p = new Promise((resolve, reject) => {
+    AuthorizationAccessToken.findOne({hash: hash}, (err, doc) => {
       if(err) reject(err);
       else {
         resolve(doc);
