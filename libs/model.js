@@ -71,3 +71,4 @@ mongoose.connection.on('disconnected', () => {
 exports.AuthorizationAccessToken = AuthorizationAccessToken;
 exports.saveAccessToken = saveAccessToken;
 exports.findAccessToken = findAccessToken;
+exports.findAccessTokenByHash = findAccessTokenByHash;
