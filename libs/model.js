@@ -22,6 +22,7 @@ const AuthorizationAccessToken = mongoose.model('AuthorizationAccessToken', auth
 const saveAccessToken = (token) => {
   let tokenModel = new AuthorizationAccessToken(token);
   console.log('Created Model Obj for saving');
+  console.log(tokenModel);
   let p = new Promise((resolve, reject) => {
     tokenModel.save((err) => {
       if(err) reject(err);
