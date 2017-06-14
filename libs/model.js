@@ -12,7 +12,7 @@ mongoose.connect(URL);
 const authorizationAccessTokenSchema = new Schema({
   access_token: String,
   hash: String,
-  tenantName: String,
+  name: String,
   scope: [String]
 });
 
